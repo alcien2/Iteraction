@@ -13,7 +13,7 @@
 #include <iomanip>
 #include <vector>
 #include <fstream>
-#include "Class SU2.h"
+#include "Class_SU2.h"
 #include "Arrays.h"
 #include "Iteractions.h"
 #include "ToGet.h"
@@ -30,11 +30,10 @@ int main()
     ffout.open("H = 0res2.txt");
     fout.open("H = 0res1.txt");
     fout1.open("H = 0res3.txt");
-    fout2.open("chi22.txt");
-    fout3.open("chi33.txt");
-    fout4.open("chi44.txt");
-    //cout << randomm.returnRandom(0,1) << endl;
-    //cout << randomm.returnRandom(0,1) << endl;
+    //fout2.open("chi22.txt");
+    //fout3.open("chi33.txt");
+    //fout4.open("chi44.txt");
+
     SuperArrayDim4<Link<MatrixSU2>> *ar;
     try{
         ar = new SuperArrayDim4<Link<MatrixSU2>>(n);
@@ -46,10 +45,8 @@ int main()
     MakeArrayGreatAgain(*ar);
     //iteraction(15, *ar, beta, randomm);
     Saver(*ar, beta, randomm, ffout);
-    //GetArray(*ar, 4);
-    Sigma(*ar, randomm, fout, ffout, fout1);
-    //double a[24] = {0.0465754,0.0393118,0.0276753,0.0179522,0.0450703,0.0253645,0.0250249,0.040621,0.0467069,-0.0235918,0.0465754,0.0250249,0.0410883,-0.00335887,-0.0173221,0.0393118,0.040621,-0.00335887,0.0276753,0.0467069,-0.0173221,0.0179522,-0.0235918,0.0450703};
-   // Average(a, fout);
+    //Sigma(*ar, randomm, fout, ffout, fout1);
+    
    // Chi(*ar, randomm, fout1, fout2, fout3, fout4);
    /*
     double beta = 0.01;
@@ -92,9 +89,9 @@ int main()
     //iter ++;
     }*/
     fout1.close();
-    fout2.close();
-    fout3.close();
-    fout4.close();
+  //fout2.close();
+  //fout3.close();
+  //fout4.close();
     ffout.close();
     fout.close();
     return 0;

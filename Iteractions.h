@@ -40,7 +40,7 @@ void kcounter (SuperArrayDim4<Link<MatrixSU2>> & arr, int i, int j, int k, int m
     MatrixSU2 phase;
     phase.set_matrix(f);
     switch(i){
-        /*case n - 1:
+        case n - 1:
         if (l == 0){
             M[0] = arr[i + 1][j][k][m].get(1)* phase *arr[i][j + 1][k][m].get(0).Inverse()*arr[i][j][k][m].get(1).Inverse();
         //for(int v = 0; v < 4; v ++){ffout << "M[0]" << M[0].get(v) <<endl;};
@@ -115,7 +115,7 @@ void kcounter (SuperArrayDim4<Link<MatrixSU2>> & arr, int i, int j, int k, int m
         M[6] = M[0] + M[1] + M[2] + M[3] + M[4] + M[5];
 
         M[6].groupElement(matrix);
-        break;*/
+        break;
 
         default:
         if (l == 0){

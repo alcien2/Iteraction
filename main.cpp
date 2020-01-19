@@ -19,10 +19,11 @@
 #include "ToGet.h"
 #include "functions.h"
 #include "ToSave.h"
+double phi;
 
-
-int main()
+int main(int argc, char** argv)
 {
+	phi = atof(argv[1]);
     TestClass randomm;
     //srand(static_cast<unsigned int>(time(0)));
     srand (time(NULL));
@@ -44,8 +45,8 @@ int main()
     double beta = 2.8;
     MakeArrayGreatAgain(*ar);
     //iteraction(15, *ar, beta, randomm);
-    Saver(*ar, beta, randomm, ffout);
-    //Sigma(*ar, randomm, fout, ffout, fout1);
+    //Saver(*ar, beta, randomm, ffout);
+    Sigma(*ar, randomm, fout, ffout, fout1);
     
    // Chi(*ar, randomm, fout1, fout2, fout3, fout4);
    /*

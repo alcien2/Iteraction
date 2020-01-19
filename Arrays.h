@@ -2,7 +2,7 @@
 #define ARRAYS_H_INCLUDED
 
 const int MaxSize = 15;
-const double phi = 0;
+extern double phi;
 //const double beta = 2.6;
 using namespace std;
 

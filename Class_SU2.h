@@ -1,11 +1,11 @@
 #ifndef CLASS_SU2_H_INCLUDED
 #define CLASS_SU2_H_INCLUDED
-
+#include "Arrays.h"
 #define PI 3.14159265
 
 using namespace std ;
 const int n = 14;
-const int ErrorNum = 5;
+const int ErrorNum = 500;
 //const double beta = 1;
    using Matrix = complex<double>[2][2];
    using TMatrix = double[n][n][n][n][4][4];
@@ -193,7 +193,7 @@ private:
 
 string GetFileName (int num ){
     stringstream filename_constructor;
-    filename_constructor << "/home/itep/petrova/Iteraction/files_beta_2.8/file_" << num << ".txt";
+    filename_constructor << "/home/itep/petrova/Iteraction/files_beta_2.8_H_"<< phi <<"/file_" << num << ".txt";
     return filename_constructor.str();
 };
 
